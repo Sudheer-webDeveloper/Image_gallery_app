@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #424141;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  
+}
+
+.imgGallery{
+    display: flex;
+    margin-top: px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.imgGallery img{
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.7s;
+}
+
+.imgGallery img:hover{
+    transform: scale(0.9) rotate(-7deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.536);
+}
+
+
+
+    /* this is js one */
+.bigImg{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.792);
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    /* display: flex; */
+    display: none;
+}
+.bigImg img{
+    position: absolute;
+    top: 14%;
+    bottom: 50%;
+    left: 30%;
+    border-radius: 3px;
+}
+.bigImg span{
+    position: absolute;
+    right: 10%;
+    color: white;
+    top: 8%;
+    font-size: 25px;
+    cursor: pointer;
+}

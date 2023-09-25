@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bigImg" id="bigImgDisplay">
+        <img src="Grid_Gallery_Img/img1.jpg" id = "ChangeImage" alt="6k-image">
+        <span onclick="CloseImage()">X</span>
+    </div>
+    
+    <div class="imgGallery">
+        <img src="Grid_Gallery_Img/img1.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+
+          <!-- here we are holding the selecting of every image by this.src and passing it as a parameter to MakingBigImage-->
+
+        <img src="Grid_Gallery_Img/img2.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img3.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img4.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img5.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img6.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img7.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+        <img src="Grid_Gallery_Img/img8.jpg" alt="4k-image" onclick = "MakingBigImage(this.src)">
+    </div>
+
+
+    <script>
+        let bigImgDisplay = document.getElementById("bigImgDisplay")
+
+        let ChangeImage = document.getElementById("ChangeImage")
+
+
+        console.log(ChangeImage.src) // this is the actual ChangeImage src we are going to update it to this.src (path)
+
+        
+
+        MakingBigImage =(path) =>{
+            bigImgDisplay.style.display = "block";
+            ChangeImage.src = path
+            console.log(path)// when we click on every small image the path or src will print in the console this is proof that this.src is selected for every image
+
+            // here we are updating the ChangeImage source by selecting the every image src from this.img
+        }
+
+
+        function CloseImage() {
+            bigImgDisplay.style.display = "none";
+        }
+
+    </script>
+   
+    
+</body>
+</html>
+
